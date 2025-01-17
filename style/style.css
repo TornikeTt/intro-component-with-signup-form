@@ -1,0 +1,67 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: hsl(0, 100%, 74%) url("../images/bg-intro-desktop.png") no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: min(1080px, 95%);
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.intro-section {
+  font-family: "Poppins", serif;
+  width: 500px;
+}
+.intro-section h1 {
+  font-size: 45px;
+  line-height: 50px;
+  letter-spacing: 1px;
+  color: white;
+}
+.intro-section p {
+  margin-top: 30px;
+  color: rgb(245, 237, 237);
+}
+
+.offer-section .offer-details {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  max-width: 530px;
+  height: 60px;
+  border-radius: 10px;
+  background-color: hsl(248, 32%, 49%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.offer-section .offer-details p {
+  font-family: "Poppins", serif;
+  color: hsl(246, 25%, 77%);
+}
+.offer-section .offer-details p span {
+  color: white;
+  font-weight: 500;
+}
+.offer-section .signup-form {
+  width: 530px;
+  height: 450px;
+  margin-top: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+/*# sourceMappingURL=style.css.map */

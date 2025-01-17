@@ -1,0 +1,90 @@
+// Primary
+$C1_red: hsl(0, 100%, 74%);
+$C2_green: hsl(154, 59%, 51%);
+
+// Accent
+$C3_blue: hsl(248, 32%, 49%);
+
+// Neutral
+$C4_dark-blue: hsl(249, 10%, 26%);
+$C5_grayish-blue: hsl(246, 25%, 77%);
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    background: $C1_red url("../images/bg-intro-desktop.png") no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    width: min(1080px, 95%);
+    height: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.intro-section {
+    font-family: "Poppins", serif;
+
+    width: 500px;
+
+    h1 {
+        font-size: 45px;
+        line-height: 50px;
+        letter-spacing: 1px;
+        color: white;
+    }
+
+    p {
+        margin-top: 30px;
+        color: rgb(245, 237, 237);
+    }
+}
+
+.offer-section {
+    .offer-details {
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+        max-width: 530px;
+        height: 60px;
+        border-radius: 10px;
+        background-color: $C3_blue;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        p {
+            font-family: "Poppins", serif;
+            color: $C5_grayish-blue;
+
+            span {
+                color: white;
+                font-weight: 500;
+            }
+        }
+    }
+
+    .signup-form {
+        width: 530px;
+        height: 450px;
+        //height: 550px;
+        margin-top: 20px;
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    }
+}
