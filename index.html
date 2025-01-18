@@ -42,19 +42,92 @@
 
                 <div class="signup-form">
                     <form novalidate>
-                        <input type="text" placeholder="First Name" /> <br />
-                        <input type="text" placeholder="Last Name" /> <br />
-                        <input type="email" placeholder="Email Address" />
-                        <br />
-                        <input type="password" placeholder="Password" /> <br />
-                        <button type="submit">Claim your free trial</button>
+                        <section>
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    placeholder="First Name"
+                                    class="fname"
+                                />
+                                <img
+                                    src="./images/icon-error.svg"
+                                    alt="error icon"
+                                />
+                            </div>
+
+                            <p class="errorMessage">
+                                First Name cannot be empty
+                            </p>
+                        </section>
+
+                        <section>
+                            <div class="input-group">
+                                <input
+                                    type="text"
+                                    placeholder="Last Name"
+                                    class="lname"
+                                />
+
+                                <img
+                                    src="./images/icon-error.svg"
+                                    alt="error icon"
+                                />
+                            </div>
+                            <p class="errorMessage">
+                                First Name cannot be empty
+                            </p>
+                        </section>
+
+                        <section>
+                            <div class="input-group">
+                                <input
+                                    type="email"
+                                    placeholder="Email Address"
+                                    class="email"
+                                />
+
+                                <img
+                                    src="./images/icon-error.svg"
+                                    alt="error icon"
+                                />
+                            </div>
+
+                            <p class="errorMessage">
+                                First Name cannot be empty
+                            </p>
+                        </section>
+
+                        <section>
+                            <div class="input-group">
+                                <input
+                                    type="password"
+                                    placeholder="Password"
+                                    class="password"
+                                />
+
+                                <img
+                                    src="./images/icon-error.svg"
+                                    alt="error icon"
+                                />
+                            </div>
+
+                            <p class="errorMessage">
+                                First Name cannot be empty
+                            </p>
+                        </section>
+
+                        <button type="submit" class="button">
+                            Claim your free trial
+                        </button>
                     </form>
-                    <p>
+
+                    <p class="agreement-text">
                         By clicking the button, you are agreeing to our
                         <span> Terms and Services </span>
                     </p>
                 </div>
             </section>
         </main>
+        <script src="./script.js"></script>
     </body>
 </html>
