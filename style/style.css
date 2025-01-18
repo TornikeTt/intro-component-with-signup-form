@@ -62,6 +62,54 @@ main {
   background-color: white;
   border-radius: 10px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.offer-section .signup-form form {
+  margin-top: 20px;
+  width: 85%;
+}
+.offer-section .signup-form form input {
+  margin-top: 18px;
+  width: 100%;
+  height: 57px;
+  font-family: "Poppins", serif;
+  font-weight: 500;
+  border: 1px solid hsl(246, 25%, 77%);
+  border-radius: 5px;
+  padding-left: 30px;
+}
+.offer-section .signup-form form input::placeholder {
+  font-weight: 700;
+}
+.offer-section .signup-form form button {
+  margin-top: 15px;
+  width: 100%;
+  height: 57px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-family: "Poppins", serif;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  background-color: hsl(154, 59%, 51%);
+  color: white;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  cursor: pointer;
+}
+.offer-section .signup-form form button:active {
+  transform: translateY(2px);
+}
+.offer-section .signup-form p {
+  margin-top: 10px;
+  font-family: "Poppins", serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: hsl(246, 25%, 77%);
+}
+.offer-section .signup-form p span {
+  color: hsl(0, 100%, 74%);
 }
 
 /*# sourceMappingURL=style.css.map */
