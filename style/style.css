@@ -66,12 +66,28 @@ main {
   flex-direction: column;
   align-items: center;
 }
-.offer-section .signup-form form {
+.offer-section .signup-form .agreement-text {
+  margin-top: 10px;
+  font-family: "Poppins", serif;
+  font-size: 10px;
+  font-weight: bold;
+  color: hsl(246, 25%, 77%);
+}
+.offer-section .signup-form .agreement-text span {
+  color: hsl(0, 100%, 74%);
+}
+
+form {
   margin-top: 20px;
   width: 85%;
 }
-.offer-section .signup-form form input {
+form .input-group {
+  position: relative;
   margin-top: 18px;
+  width: 100%;
+  height: 57px;
+}
+form .input-group input {
   width: 100%;
   height: 57px;
   font-family: "Poppins", serif;
@@ -79,11 +95,33 @@ main {
   border: 1px solid hsl(246, 25%, 77%);
   border-radius: 5px;
   padding-left: 30px;
+  padding-right: 100px;
 }
-.offer-section .signup-form form input::placeholder {
+form .input-group input::placeholder {
   font-weight: 700;
 }
-.offer-section .signup-form form button {
+form .input-group .errorStyle {
+  border: 2px solid hsl(0, 100%, 74%);
+}
+form .input-group img {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+}
+form .errorMessage {
+  display: none;
+  max-width: 150px;
+  font-family: "Poppins", serif;
+  margin-top: 5px;
+  font-size: 10px;
+  font-weight: 500;
+  font-style: italic;
+  color: hsl(0, 100%, 74%);
+  margin-left: auto;
+}
+form button {
   margin-top: 15px;
   width: 100%;
   height: 57px;
@@ -98,18 +136,8 @@ main {
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   cursor: pointer;
 }
-.offer-section .signup-form form button:active {
+form button:active {
   transform: translateY(2px);
-}
-.offer-section .signup-form p {
-  margin-top: 10px;
-  font-family: "Poppins", serif;
-  font-size: 10px;
-  font-weight: bold;
-  color: hsl(246, 25%, 77%);
-}
-.offer-section .signup-form p span {
-  color: hsl(0, 100%, 74%);
 }
 
 /*# sourceMappingURL=style.css.map */

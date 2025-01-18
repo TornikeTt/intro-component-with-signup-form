@@ -91,51 +91,7 @@ main {
         flex-direction: column;
         align-items: center;
 
-        form {
-            margin-top: 20px;
-            width: 85%;
-
-            input {
-                margin-top: 18px;
-                width: 100%;
-                height: 57px;
-
-                font-family: "Poppins", serif;
-                font-weight: 500;
-                border: 1px solid $C5_grayish-blue;
-                border-radius: 5px;
-                padding-left: 30px;
-
-                &::placeholder {
-                    font-weight: 700;
-                }
-            }
-
-            button {
-                margin-top: 15px;
-                width: 100%;
-                height: 57px;
-                border-radius: 5px;
-                text-transform: uppercase;
-
-                font-family: "Poppins", serif;
-                font-size: 16px;
-
-                border: none;
-                outline: none;
-                background-color: $C2_green;
-                color: white;
-                box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-                    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-                cursor: pointer;
-
-                &:active {
-                    transform: translateY(2px);
-                }
-            }
-        }
-
-        p {
+        .agreement-text {
             margin-top: 10px;
             font-family: "Poppins", serif;
             font-size: 10px;
@@ -146,6 +102,81 @@ main {
             span {
                 color: $C1_red;
             }
+        }
+    }
+}
+
+form {
+    margin-top: 20px;
+    width: 85%;
+
+    .input-group {
+        position: relative;
+        margin-top: 18px;
+        width: 100%;
+        height: 57px;
+
+        input {
+            width: 100%;
+            height: 57px;
+
+            font-family: "Poppins", serif;
+            font-weight: 500;
+            border: 1px solid $C5_grayish-blue;
+            border-radius: 5px;
+            padding-left: 30px;
+            padding-right: 100px;
+
+            &::placeholder {
+                font-weight: 700;
+            }
+        }
+
+        .errorStyle {
+            border: 2px solid $C1_red;
+        }
+
+        img {
+            display: none;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+        }
+    }
+
+    .errorMessage {
+        display: none;
+        max-width: 150px;
+        font-family: "Poppins", serif;
+        margin-top: 5px;
+        font-size: 10px;
+        font-weight: 500;
+        font-style: italic;
+        color: $C1_red;
+        margin-left: auto;
+    }
+
+    button {
+        margin-top: 15px;
+        width: 100%;
+        height: 57px;
+        border-radius: 5px;
+        text-transform: uppercase;
+
+        font-family: "Poppins", serif;
+        font-size: 16px;
+
+        border: none;
+        outline: none;
+        background-color: $C2_green;
+        color: white;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
+            rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+        cursor: pointer;
+
+        &:active {
+            transform: translateY(2px);
         }
     }
 }
