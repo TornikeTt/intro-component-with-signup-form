@@ -119,6 +119,11 @@ form {
                 &::placeholder {
                     font-weight: 700;
                 }
+
+                &:focus {
+                    outline: none !important;
+                    border: 2px solid gray;
+                }
             }
 
             .error-icon {

@@ -95,6 +95,10 @@ form .form-section .input-group input {
 form .form-section .input-group input::placeholder {
   font-weight: 700;
 }
+form .form-section .input-group input:focus {
+  outline: none !important;
+  border: 2px solid gray;
+}
 form .form-section .input-group .error-icon {
   display: none;
   position: absolute;
