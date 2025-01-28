@@ -96,6 +96,7 @@ form .form-section .input-group input::placeholder {
   font-weight: 700;
 }
 form .form-section .input-group .error-icon {
+  display: none;
   position: absolute;
   top: 50%;
   right: 20px;
