@@ -33,6 +33,7 @@
                     developers think is invaluable.
                 </p>
             </section>
+
             <section class="offer-section">
                 <div class="offer-details">
                     <p>
@@ -40,90 +41,97 @@
                     </p>
                 </div>
 
-                <div class="signup-form">
+                <div class="form-container">
                     <form novalidate>
-                        <section>
+                        <!-- First Name Section -->
+                        <section class="form-section">
                             <div class="input-group">
                                 <input
                                     type="text"
                                     placeholder="First Name"
-                                    class="fname"
+                                    class="input--first-name"
                                 />
                                 <img
                                     src="./images/icon-error.svg"
                                     alt="error icon"
+                                    class="error-icon error-icon--first-name"
                                 />
                             </div>
-
-                            <p class="errorMessage">
-                                First Name cannot be empty
+                            <p class="error-message error-message--first-name">
+                                first Name cannot be empty
                             </p>
                         </section>
+                        <!-- First Name Section -->
 
-                        <section>
+                        <!-- Last Name Section -->
+                        <section class="form-section">
                             <div class="input-group">
                                 <input
                                     type="text"
                                     placeholder="Last Name"
-                                    class="lname"
+                                    class="input--last-name"
                                 />
-
                                 <img
                                     src="./images/icon-error.svg"
                                     alt="error icon"
+                                    class="error-icon error-icon--last-name"
                                 />
                             </div>
-                            <p class="errorMessage">
-                                First Name cannot be empty
+                            <p class="error-message error-message--last-name">
+                                first Name cannot be empty
                             </p>
                         </section>
+                        <!-- Last Name Section -->
 
-                        <section>
+                        <!-- Email Address Section -->
+                        <section class="form-section">
                             <div class="input-group">
                                 <input
                                     type="email"
                                     placeholder="Email Address"
-                                    class="email"
+                                    class="input--email"
                                 />
-
                                 <img
                                     src="./images/icon-error.svg"
                                     alt="error icon"
+                                    class="error-icon error-icon--email"
                                 />
                             </div>
-
-                            <p class="errorMessage">
-                                First Name cannot be empty
+                            <p class="error-message error-message--email">
+                                first Name cannot be empty
                             </p>
                         </section>
+                        <!-- Email Address Section -->
 
-                        <section>
+                        <!-- Password Section -->
+                        <section class="form-section">
                             <div class="input-group">
                                 <input
                                     type="password"
                                     placeholder="Password"
-                                    class="password"
+                                    class="input--password"
                                 />
-
                                 <img
                                     src="./images/icon-error.svg"
                                     alt="error icon"
+                                    class="error-icon error-icon--password"
                                 />
                             </div>
-
-                            <p class="errorMessage">
-                                First Name cannot be empty
+                            <p class="error-message error-message--password">
+                                first Name cannot be empty
                             </p>
                         </section>
+                        <!-- Password Section -->
 
-                        <button type="submit" class="button">
+                        <!-- Submit Button -->
+                        <button type="submit" class="button button--submit">
                             Claim your free trial
                         </button>
                     </form>
 
                     <p class="agreement-text">
                         By clicking the button, you are agreeing to our
-                        <span> Terms and Services </span>
+                        <span class="agreement-link">Terms and Services</span>
                     </p>
                 </div>
             </section>

@@ -53,108 +53,93 @@ main {
     }
 }
 
-.offer-section {
-    .offer-details {
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-        max-width: 530px;
-        height: 60px;
-        border-radius: 10px;
-        background-color: $C3_blue;
+.offer-details {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    max-width: 530px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: $C3_blue;
 
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-        p {
-            font-family: "Poppins", serif;
-            color: $C5_grayish-blue;
+    p {
+        font-family: "Poppins", serif;
+        color: $C5_grayish-blue;
 
-            span {
-                color: white;
-                font-weight: 500;
-            }
+        span {
+            color: white;
+            font-weight: 500;
         }
     }
+}
 
-    .signup-form {
-        width: 530px;
-        height: 450px;
-        //height: 550px;
-        margin-top: 20px;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
-            rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+// ==========================================> FORM START
+.form-container {
+    width: 530px;
+    height: 450px;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+        rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-
-        .agreement-text {
-            margin-top: 10px;
-            font-family: "Poppins", serif;
-            font-size: 10px;
-
-            font-weight: bold;
-            color: $C5_grayish-blue;
-
-            span {
-                color: $C1_red;
-            }
-        }
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 form {
     margin-top: 20px;
     width: 85%;
 
-    .input-group {
+    .form-section {
         position: relative;
         margin-top: 18px;
         width: 100%;
         height: 57px;
 
-        input {
+        .input-group {
             width: 100%;
-            height: 57px;
+            height: 100%;
 
-            font-family: "Poppins", serif;
-            font-weight: 500;
-            border: 1px solid $C5_grayish-blue;
-            border-radius: 5px;
-            padding-left: 30px;
-            padding-right: 100px;
+            input {
+                width: 100%;
+                height: 100%;
 
-            &::placeholder {
-                font-weight: 700;
+                font-family: "Poppins", serif;
+                font-weight: 500;
+                border: 1px solid $C5_grayish-blue;
+                border-radius: 5px;
+                padding-left: 30px;
+                padding-right: 100px;
+
+                &::placeholder {
+                    font-weight: 700;
+                }
+            }
+
+            .error-icon {
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                transform: translateY(-50%);
             }
         }
 
-        .errorStyle {
-            border: 2px solid $C1_red;
-        }
+        .error-message {
+            display: flex;
+            justify-content: end;
 
-        img {
-            display: none;
-            position: absolute;
-            top: 50%;
-            right: 20px;
-            transform: translateY(-50%);
+            font-family: "Poppins", serif;
+            margin-top: 5px;
+            font-size: 10px;
+            font-weight: 500;
+            font-style: italic;
+            color: $C1_red;
         }
-    }
-
-    .errorMessage {
-        display: none;
-        max-width: 150px;
-        font-family: "Poppins", serif;
-        margin-top: 5px;
-        font-size: 10px;
-        font-weight: 500;
-        font-style: italic;
-        color: $C1_red;
-        margin-left: auto;
     }
 
     button {
@@ -178,5 +163,20 @@ form {
         &:active {
             transform: translateY(2px);
         }
+    }
+}
+
+// ==========================================> FORM END
+
+.agreement-text {
+    margin-top: 10px;
+    font-family: "Poppins", serif;
+    font-size: 10px;
+
+    font-weight: bold;
+    color: $C5_grayish-blue;
+
+    span {
+        color: $C1_red;
     }
 }
