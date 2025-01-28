@@ -100,6 +100,8 @@ form .form-section .input-group input:focus {
   border: 2px solid gray;
 }
 form .form-section .input-group .error-icon {
+  width: 24px;
+  height: 24px;
   display: none;
   position: absolute;
   top: 50%;
