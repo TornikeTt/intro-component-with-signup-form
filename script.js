@@ -48,6 +48,20 @@ for (const field in inputsData) {
     input.addEventListener("input", () => validateInput(input, field));
 }
 
+/*  
+    validateInput checks whether an input field is correctly filled.  
+
+    Validation rules:  
+    1. No input field can be empty.  
+    2. First Name / Last Name must contain only English letters.  
+    3. Email must be in a valid email format.  
+    4. Password requirements:  
+        - Minimum 6 characters  
+        - Maximum 20 characters  
+        - Must include at least one uppercase letter  
+        - Must include at least one symbol  
+*/
+
 function validateInput(input, field) {
     const error_correct_Icon = document.querySelector(`.error-icon--${field}`);
     const errorMessage = document.querySelector(`.error-message--${field}`);
@@ -99,6 +113,35 @@ function adjustHeight() {
         form.style.marginTop = "0px";
     }
 
+    /*  
+        Adjusting the height of the form container, button, and form sections  
+        based on the number of invalid input fields.  
+
+        1. The initial height of the form container is 450px.  
+        - If all 4 inputs are invalid, the height should be 550px.  
+        - The formula used to adjust the height dynamically is:  
+                450 + (number of invalid inputs * 25)  
+
+        2. The button’s top margin is adjusted to keep proper spacing:  
+                18 + (number of invalid inputs * 3)  
+
+        3. Each form section's top margin increases based on the number of invalid fields:  
+                18 + (number of invalid inputs * 6.75)  
+
+        Example calculations:  
+        - If 3 inputs are invalid:  
+                formContainer height: 450 + (3 * 25) = 525px  
+                button margin: 18 + (3 * 3) = 27px  
+                form section margin: 18 + (3 * 6.75) = 38.25px  
+
+        - If only 2 inputs are invalid:  
+                formContainer height: 450 + (2 * 25) = 500px  
+                button margin: 18 + (2 * 3) = 24px  
+                form section margin: 18 + (2 * 6.75) = 31.5px  
+
+        This ensures that the layout adjusts dynamically based on validation results.
+    */
+
     formContainer.style.height = `${450 + invalid_Count * 25}px`;
     button.style.marginTop = `${18 + invalid_Count * 3}px`;
 
@@ -106,9 +149,3 @@ function adjustHeight() {
         formSection[i].style.marginTop = `${18 + invalid_Count * 6.75}px`;
     }
 }
-
-/* 
-    1. if count = 4 form margin-top: 0;
-    2. if count = 4 button margin-top: 30px;
-    3. if count = 4 form-section margin-top: 45px;
-*/
