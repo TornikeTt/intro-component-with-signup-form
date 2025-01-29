@@ -1,7 +1,9 @@
 # Frontend Mentor - Intro Component with Sign-Up Form
 
-![Desktop Design Preview](./design/desktop-preview.jpg)
-![Mobile Design Preview](./design/mobile-design.jpg)
+<p align="center">
+    <img src="./design/desktop-preview.jpg" alt="Desktop Design Preview">
+    <img src="./design/mobile-design.jpg" alt="Mobile Design Preview">
+</p>
 
 ## Overview
 
