@@ -53,10 +53,15 @@ main {
     }
 }
 
+.offer-section {
+    width: 530px;
+    min-width: 350px;
+}
+
 .offer-details {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
         rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    max-width: 530px;
+    width: 100%;
     height: 60px;
     border-radius: 10px;
     background-color: $C3_blue;
@@ -78,7 +83,7 @@ main {
 
 // ==========================================> FORM START
 .form-container {
-    width: 530px;
+    width: 100%;
     height: 450px;
     margin-top: 20px;
     background-color: white;
