@@ -1,8 +1,8 @@
-const form_container = document.querySelector(".form-container");
 const form = document.querySelector(".form-container form");
 
 const inputsData = {
     firstName: {
+        valid: true,
         input: document.querySelector(".input--first-name"),
         validationRule: /^[a-zA-Z]+$/,
         errorMessage:
@@ -11,6 +11,7 @@ const inputsData = {
     },
 
     lastName: {
+        valid: true,
         input: document.querySelector(".input--last-name"),
         validationRule: /^[a-zA-Z]+$/,
         errorMessage:
@@ -19,6 +20,7 @@ const inputsData = {
     },
 
     email: {
+        valid: true,
         input: document.querySelector(".input--email"),
         validationRule: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
         errorMessage: "Looks like this is not a valid email.",
@@ -26,6 +28,7 @@ const inputsData = {
     },
 
     password: {
+        valid: true,
         input: document.querySelector(".input--password"),
         validationRule:
             /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+])[a-zA-Z0-9!@#$%^&*()_+]{6,20}$/,
@@ -41,6 +44,7 @@ for (const field in inputsData) {
         e.preventDefault();
         validateInput(input, field);
     });
+
     input.addEventListener("input", () => validateInput(input, field));
 }
 
@@ -52,14 +56,18 @@ function validateInput(input, field) {
     const value = input.value;
 
     if (value !== "" && isValid === true) {
-        errorMessage.innerText = "";
+        inputsData[field].valid = true;
 
         error_correct_Icon.style.display = "flex";
         error_correct_Icon.src = "./images/correct.png";
 
         input.style.borderWidth = "2px";
         input.style.borderColor = "green";
+
+        errorMessage.innerText = "";
     } else {
+        inputsData[field].valid = false;
+
         error_correct_Icon.style.display = "block";
         error_correct_Icon.src = "./images/icon-error.svg";
 
@@ -72,4 +80,35 @@ function validateInput(input, field) {
             errorMessage.innerText = inputsData[field].errorMessage;
         }
     }
+
+    adjustHeight();
 }
+
+function adjustHeight() {
+    const formContainer = document.querySelector(".form-container");
+    const formSection = document.querySelectorAll(".form-section");
+    const button = document.querySelector(".button--submit");
+
+    const invalid_Count = Object.values(inputsData).filter(
+        (data) => !data.valid
+    ).length;
+
+    if (invalid_Count === 0) {
+        form.style.marginTop = "20px";
+    } else if (invalid_Count === 4) {
+        form.style.marginTop = "0px";
+    }
+
+    formContainer.style.height = `${450 + invalid_Count * 25}px`;
+    button.style.marginTop = `${18 + invalid_Count * 3}px`;
+
+    for (let i = 0; i < formSection.length; i++) {
+        formSection[i].style.marginTop = `${18 + invalid_Count * 6.75}px`;
+    }
+}
+
+/* 
+    1. if count = 4 form margin-top: 0;
+    2. if count = 4 button margin-top: 30px;
+    3. if count = 4 form-section margin-top: 45px;
+*/
