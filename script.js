@@ -33,7 +33,7 @@ const inputsData = {
         validationRule:
             /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+])[a-zA-Z0-9!@#$%^&*()_+]{6,20}$/,
         errorMessage:
-            "Password must be 6-20 characters, include 1 uppercase letter, and 1 symbol.",
+            "Password must be 6-20 characters with 1 uppercase letter and 1 symbol.",
         empty_errorMessage: "Password cannot be empty",
     },
 };
