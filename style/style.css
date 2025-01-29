@@ -64,6 +64,7 @@ main {
 .form-container {
   width: 100%;
   height: 450px;
+  overflow: auto;
   margin-top: 20px;
   background-color: white;
   border-radius: 10px;
@@ -154,6 +155,51 @@ form .button--submit:active {
 }
 .agreement-text span {
   color: hsl(0, 100%, 74%);
+}
+
+@media (max-width: 595px) {
+  body {
+    height: 200vh;
+    background: hsl(0, 100%, 74%) url("../images/bg-intro-mobile.png") no-repeat;
+  }
+  main {
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow: hidden;
+  }
+  .intro-section {
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .intro-section h1 {
+    width: 300px;
+    font-size: 25px;
+    line-height: 30px;
+  }
+  .intro-section p {
+    width: 310px;
+    margin-top: 20px;
+  }
+  .offer-section {
+    width: 100%;
+  }
+  .offer-details {
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+  }
+  .offer-details p {
+    width: 200px;
+    text-align: center;
+  }
+  .agreement-text {
+    width: 250px;
+    text-align: center;
+    line-height: 15px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
