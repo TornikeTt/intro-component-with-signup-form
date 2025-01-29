@@ -89,6 +89,8 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    transition: height 1s;
 }
 
 form {
@@ -97,7 +99,10 @@ form {
 
     .form-section {
         position: relative;
+
         margin-top: 18px;
+        transition: margin 1s;
+
         width: 100%;
         height: 57px;
 
@@ -151,8 +156,10 @@ form {
         }
     }
 
-    button {
+    .button--submit {
         margin-top: 15px;
+        transition: margin 1s;
+
         width: 100%;
         height: 57px;
         border-radius: 5px;
