@@ -35,15 +35,31 @@ const inputsData = {
     },
 };
 
+// Attach input event listeners
 for (const field in inputsData) {
     const input = inputsData[field].input;
-    form.addEventListener("submit", (e) => {
-        e.preventDefault();
-        validateInput(input, field);
-    });
-
     input.addEventListener("input", () => validateInput(input, field));
 }
+
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let allValid = true; // Variable to track if all inputs are valid
+
+    for (const field in inputsData) {
+        const input = inputsData[field].input;
+        validateInput(input, field);
+        if (!inputsData[field].valid) {
+            allValid = false; // If any input is invalid, set allValid to false
+        }
+    }
+
+    // If all inputs are valid, show success message and reset form
+    if (allValid) {
+        alert("Registration successful!");
+        form.reset();
+        resetFormStyles();
+    }
+});
 
 /*  
     validateInput checks whether an input field is correctly filled.  
@@ -59,6 +75,7 @@ for (const field in inputsData) {
         - Must include at least one symbol  
 */
 
+// Function to validate individual input fields
 function validateInput(input, field) {
     const error_correct_Icon = document.querySelector(`.error-icon--${field}`);
     const errorMessage = document.querySelector(`.error-message--${field}`);
@@ -95,6 +112,22 @@ function validateInput(input, field) {
     adjustHeight();
 }
 
+// Function to reset the form styles after successful submission
+function resetFormStyles() {
+    const inputs = document.querySelectorAll("input");
+    const errorIcons = document.querySelectorAll(".error-icon");
+    const errorMessages = document.querySelectorAll(".error-message");
+
+    inputs.forEach((input) => {
+        input.style.borderWidth = "1px";
+        input.style.borderColor = "hsl(246, 25%, 77%)";
+    });
+
+    errorIcons.forEach((icon) => (icon.style.display = "none"));
+    errorMessages.forEach((message) => (message.innerText = ""));
+}
+
+// Adjust form height based on validation state
 function adjustHeight() {
     const formContainer = document.querySelector(".form-container");
     const formSection = document.querySelectorAll(".form-section");
