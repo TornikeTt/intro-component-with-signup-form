@@ -55,7 +55,7 @@ form.addEventListener("submit", (e) => {
 
     // If all inputs are valid, show success message and reset form
     if (allValid) {
-        alert("Registration successful!");
+        alert("Registration successful! ✅");
         form.reset();
         resetFormStyles();
     }
