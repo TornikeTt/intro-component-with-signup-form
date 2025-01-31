@@ -34,4 +34,4 @@ The layout is designed to adapt seamlessly to both **desktop** and **mobile** vi
 ## 🌍 Live Demo
 
 Check out the live version of the project here:  
-[Live Demo](https://shimmering-druid-e15259.netlify.app/)
+[Live Demo](https://visionary-manatee-3983a6.netlify.app/)
