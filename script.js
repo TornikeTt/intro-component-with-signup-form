@@ -5,8 +5,7 @@ const inputsData = {
         valid: true,
         input: document.querySelector(".input--first-name"),
         validationRule: /^[a-zA-Z]+$/,
-        errorMessage:
-            "First Name must use only English letters (no symbols or numbers).",
+        errorMessage: "First Name must use only English letters.",
         empty_errorMessage: "First Name cannot be empty",
     },
 
@@ -14,8 +13,7 @@ const inputsData = {
         valid: true,
         input: document.querySelector(".input--last-name"),
         validationRule: /^[a-zA-Z]+$/,
-        errorMessage:
-            "Last Name must use only English letters (no symbols or numbers).",
+        errorMessage: "Last Name must use only English letters.",
         empty_errorMessage: "Last Name cannot be empty",
     },
 
@@ -32,8 +30,7 @@ const inputsData = {
         input: document.querySelector(".input--password"),
         validationRule:
             /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+])[a-zA-Z0-9!@#$%^&*()_+]{6,20}$/,
-        errorMessage:
-            "Password must be 6-20 characters with 1 uppercase letter and 1 symbol.",
+        errorMessage: "Password must be: 6-20 chars, 1 uppercase, 1 symbol.",
         empty_errorMessage: "Password cannot be empty",
     },
 };
